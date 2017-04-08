@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性选择器</title>
+		<style>
+		   /*单个属性*/
+		    a[href="a2.mp3"]{
+		    	  color:red;
+		    }
+		    /*多个属性值之一（以空格分隔）*/
+		    a[href~="a1.rmvb"]{
+		    	  color:green;
+		    }
+		     /*可以包含部分属性,以-分隔*/
+		    a[href|="a3"]{
+		    	  color: pink;
+		    }
+		    /*属性中包含字符*/
+		     a[href*="rmvb"]{
+		    	  color: yellow;
+		    }
+		    /*属性以xxx开头*/
+		    a[href^="xxx"]{
+		    	  color:#5BC0DE;
+		    }
+		    /*属性以abc结束*/
+		    a[href$="abc"]{
+		    	  color:#5BC0DE;
+		    }
+		
+			/*儿子选择器,IE7开始支持*/
+			div>span{
+				font-weight: bold;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			<a href="a1.mp3 a1.rmvb">链接1</a>
+			<a href="a2.mp3">链接2</a>
+			<a href="a3-3.mp3">链接3</a>
+			<a href="a4.rmvb">链接4</a>
+			<a href="xxxa5.rmvb">链接5</a>
+			<a href="a6.abc">链接6</a>
+		</div>
+		
+		<div>
+			我是一个<span>好人</span>
+		</div>
+		
+		<!--孙子不起作用-->
+		<div>
+			<p>
+				我是一个<span>好人</span>
+			</p>
+		</div>
+		
+		
+	
+		
+	</body>
+</html>

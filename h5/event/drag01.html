@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body onload="mydrag()">
+		<!--
+        	描述：图片拖放
+        	drag  drop
+        	ondragover 何处方式方式拖放的数据
+        	ondrop 放置数据
+        	不成功
+        -->
+        <script>
+        	 function mydrag(){
+        	 	//alert("aaa");
+        	 	var darg_div = document.getElementById("drag_div");
+        	 	var show_msg = document.getElementById("show_msg");
+        	 	var img = document.getElementById("myimg");
+        	 	//拖拽事件
+        	 	drag_div.ondragenter = function(e){
+        	 		show_msg.innerHTML = showMsg(e);
+        	 	}
+        	 	//阻止默认操作
+        	 	drag_div.ondragover = function(e){
+        	 		e.preventDefault();
+        	 	}
+        	 	//开始拖动图片
+        	 	img.ondragstart= function(e){
+        	 		e.dataTransfer.setData("a","myimg");
+        	 	}
+        	 	//开始拖动
+        	 	drag_div.ondrag = function(e){
+        	 		//e.preventDefault();
+        	 		alert("11");
+        	 		//var img = document.getElementById(e.dataTransfer.getData("a"));
+        	 		//darg_div.appendChild(img);
+        	 	}
+        	 }
+        	 //展示拖拽信息
+        	 function showMsg(info){
+        	 	var s = "";
+        	 	for(var i in info){
+        	 		s+=i+"---"+info[i]+"<br/>";
+        	 	}
+            return s;
+        	 }
+        </script>
+		<div id="drag_div" style="background-color: #cccccc;width: 800px;height: 300px;"></div>
+		<img id="myimg" src="fly.png" />
+		<div id="show_msg"></div>
+		
+	</body>
+</html>

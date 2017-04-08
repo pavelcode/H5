@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<!--输入框-->
+	<form>
+	用户名<input type="text" name="用户名" /><br />
+	密码： <input type="password" name="密码" />
+	</form>
+	
+	<!--单选按钮：
+	互斥操作有相同的名字-->
+	<form>
+	<input type="radio" name="sex" value="male" checked /> Male<br />
+	<input type="radio" name="sex" value="female" /> Female
+	</form>
+	
+	<!--复选按钮：
+	最好有相同的名字-->
+	<form>
+	<input type="checkbox" name="bike" />I have a bike<br />
+	<input type="checkbox" name="car" />I have a car
+	</form>
+	
+	<!--下拉列表：
+	select选择  option选项-->
+	<form>
+	<select name="cars">
+	<option value="volvo">Volvo</option>
+	<option value="saab">Saab</option>
+	</select>
+	</form>
+	
+	<!--文本域：
+		rows代表行
+		columns代表列
+	-->
+	<textarea rows="10" cols="30"></textarea>
+		
+	<!--普通按钮-->
+	<input type="button" value="普通按钮">
+	<!--提交按钮-->
+	<input type="submit" value="提交按钮">
+	<!--重置按钮-->
+	<input type="reset" value="重置按钮" />
+	
+	
+	</body>
+</html>

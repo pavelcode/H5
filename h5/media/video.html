@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>播放视频</title>
+	</head>
+	<body>
+		<!--
+        	描述：游览器支持ogg格式为文件，所有首先需要转码
+        	http://www.ffmpeg.org 下载转码工具
+        命令：	ffmpeg -i  xxx.mp4 -f ogg  -acodec libvorbis xxx.ogg
+        -->
+		
+        <video controls="controls">
+        	  <source src="xxx.ogg" type="video/ogg"></source>
+        	  <source src="xxx.mp4" type="video/mp4"></source>
+        </video>
+		
+	</body>
+</html>
+r

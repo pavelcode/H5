@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定位</title>
+        <style>
+        	#bad{
+		  position:relative;
+		  left:-20px;
+		}
+		
+		#good{
+		   position:relative;
+		   left: 20px;
+		}
+		
+		
+		h2{ position: absolute;
+		   left: 100px;
+		   top: 100px;}
+		   
+		 img{
+		 	position: fixed;
+		 	top: 20px;
+		 	right: 0px;
+		 }  
+		 
+		 .or1 {
+		   background-color: #0000FF;
+		   height: 20px;
+		   width: 100px;
+		   overflow: hidden;
+		 }
+		 
+		  .or2 {
+		   background-color: #0000FF;
+		   height: 20px;
+		   width: 100px;
+		   overflow:scroll;
+		 }
+        </style>
+	</head>
+	<body>
+		<!--相对定位-->
+		<h1>我是人</h1>
+		<h1 id="bad">我是坏人</h1>
+		<h1 id="good">我是好人</h1>
+		
+		<!--绝对定位-->
+		<h2>好吧</h2>
+		
+		<!--固定位置-->
+		<img src="baidu.png" />
+		
+		
+		<!--溢出-->
+		<!--不能滚动hidden-->
+		<div class="or1"> 我是一个好人，也是一个坏人</div>
+		
+		<br />
+		
+		<!--可以滚动scroll-->
+		<div class="or2"> 我是一个好人，也是一个坏人</div>
+
+		
+		
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM指令</title>
+		<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-app="" ng-init="count=5">
+		 <button ng-disabled="true">点我!</button>
+		 
+		 <p ng-show="true"> ng-show我是可见的。</p>
+         <p ng-show="false"> ng-show我是不可见的。</p>
+         
+         <p ng-if="true">ng-if我是可见的</p>
+         <p ng-if="false">ng-if我是不可见的</p>
+         
+         <!--
+         	ng-show ng-if的区别
+         	ng-if是否存在标签
+         -->
+         
+         <!--
+         	使用表达式
+         -->
+         <p ng-show="count>5">表达式可见。</p>
+         
+         
+         <p ng-hide="true">ng-hide我是不可见的。</p>
+         <p ng-hide="false">ng-hide我是可见的。</p>
+         
+		</div>
+	</body>
+</html>
